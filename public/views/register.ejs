@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- <script src="https://kit.fontawesome.com/2d799ae9f1.js"></script> -->
+<head>
+  <meta charset="utf-8">
+  <title>login</title>
+  <meta charset="utf-8">
+  
+  <!-- pdfpart -->
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        $("#btnPrint").live("click", function () {
+            var divContents = $("#dvContainer").html();
+            var printWindow = window.open('', '', 'height=400,width=800');
+            printWindow.document.write('<html><head><title>DIV Contents</title>');
+            printWindow.document.write('</head><body >');
+            printWindow.document.write(divContents);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.print();
+        });
+    </script>
+    <!-- pdfpart -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="/css/styles.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  
+
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a  href="/"><img src="../views/photos/logo.png" alt="" width="130" height="86"></a>
+      </div>
+        <ul class="nav navbar-nav navbar-right">
+          <!-- 6 -->
+          <li id="home"><a href="/">LOGIN</a></li>
+          <li id="about"><a href="/register">REGISTER</a></li>
+          <li id="contact"><a href="/contact">CONTACT US</a></li>
+          <li id="contact"><a href="/admin">ADMIN LOGIN</a></li>
+        </ul>
+    </div>
+  </nav>
+
+  <body>
+    <div class="container">
+
+  <h2>Registration</h2>
+  <hr>
+  <div class="container col-xs-9">
+    <form action="/register" method="post">
+      <div class="user-details">
+        <div class="row col-lg-12">
+          <div class="col-lg-6 input-box">
+            <span class="details">Full Name</span>
+              <input type="text" placeholder="Enter your name" required name="fname">
+          </div>
+          <div class="col-lg-6 input-box">
+            <span class="details">Phone Number</span>
+            <input type="number" placeholder="Enter your number" required name="phone">
+            </div>
+        </div>
+        <div class="row col-lg-12">
+          <div class="col-lg-6 input-box">
+            <span class="details">Age</span>
+            <input type="number" placeholder="Enter your age" required name="age">
+          </div>
+          <div class="col-lg-6 input-box">
+            <span class="details">Email</span>
+            <input type="text" id="email" placeholder="Enter your name" required name="email">
+            </div>
+        </div>
+        <div class="row col-lg-12">
+          <div class="col-lg-6 input-box">
+            <span class="details">Password</span>
+            <input type="password" id="password" minlength="6" placeholder="Enter your password" required name="password">
+          </div>
+          <div class="col-lg-6 input-box">
+            <span class="details">Confirm Password</span>
+            <input type="password" placeholder="Confirm your password" minlength="6" required >
+            </div>
+        </div>
+      </div>
+      <div class="button row col-lg-12 ">
+        <input type="submit" value="register">
+      </div>
+    </form>
+  </div>
+
+
+
+    </div>
+  <div class="footer-padding"></div>
+  <div class="footer">
+    <p>All rights reserved</p>
+  </div>
+  </div>
+  </body>
+</html>
